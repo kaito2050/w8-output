@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <main class="login-card">
+        <h1 class="login-title">Sign in to your account</h1>
+        <form class="login-form" action="#" method="post">
+            <div class="login-field">
+                <label class="login-label" for="email">Your email</label>
+                <input
+                    class="login-input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="name@company.com"
+                    required
+                >
+            </div>
+            <div class="login-field">
+                <label class="login-label" for="password">Password</label>
+                <input
+                    class="login-input"
+                    type="password"
+                    id="password"
+                    name="password"
+                    autocomplete="current-password"
+                    placeholder="••••••••"
+                    required
+                >
+            </div>
+            <button class="login-submit" type="submit">Sign in</button>
+        </form>
+        <p class="login-footer">
+            Don’t have an account yet? <a href="./signup.html">Sign up</a>
+        </p>
+    </main>
+    <script src="./login-storage.js"></script>
+</body>
+</html>

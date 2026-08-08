@@ -1,0 +1,76 @@
+:root {
+  --bg: #0b1020;
+  --tile: #ff6b1a;
+  --text: #ffffff;
+  --gap: 14px;
+  --radius: 12px;
+  --tile-min-h: 72px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 32px 24px 48px;
+}
+
+.demo {
+  margin-bottom: 40px;
+}
+
+.demo h2 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.55;
+  margin: 0 0 12px;
+}
+
+/* Flex “grid”: container */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  max-width: 720px;
+}
+
+/* Tile */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tile-min-h);
+  background: var(--tile);
+  color: var(--text);
+  border-radius: var(--radius);
+  font-size: 1.125rem;
+  font-weight: 600;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/* 横4 — 1行あたり4枚: (100% - 3 gaps) / 4 */
+.grid--4x4 .item {
+  flex-basis: calc((100% - 3 * var(--gap)) / 4);
+}
+
+/* 横2 — 1行あたり2枚 */
+.grid--2x2 .item {
+  flex-basis: calc((100% - 1 * var(--gap)) / 2);
+}
+
+/* 横6 — 1行あたり6枚 */
+.grid--6x1 .item {
+  flex-basis: calc((100% - 5 * var(--gap)) / 6);
+  min-height: 56px;
+  font-size: 1rem;
+}
